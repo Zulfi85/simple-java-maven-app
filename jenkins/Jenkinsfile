@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        choice (choices: ["NA-EST", "NA-CST", "EU-WST"], description: "Choose Env", name: "aZone"    
+        choice (choices: ["NA-EST", "NA-CST", "EU-WST"], description: "Choose Env", name: "aZone")    
     }
     
     stages {
