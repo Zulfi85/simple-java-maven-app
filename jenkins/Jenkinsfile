@@ -6,7 +6,7 @@ pipeline {
     
     stages {
         Stage('Initiate'){
-            steps echo "Choice is set to : ${params.aZone}"
+            steps {echo "Choice is set to : ${params.aZone}"}
         }
         stage('Build') {
             steps {
