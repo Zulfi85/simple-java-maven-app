@@ -1,6 +1,13 @@
 pipeline {
     agent any
+    parameters {
+        choice (choices: ["NA-EST", "NA-CST", "EU-WST"], description: "Choose Env", name: "aZone"    
+    }
+    
     stages {
+        Stage('Initiate'){
+            steps echo "Choice is set to : ${params.aZone}"
+        }
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
